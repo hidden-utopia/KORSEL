@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORSEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Backsound -->
+    <audio id="bg-music" loop muted src="backsound.mp3"></audio>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">KORSEL</div>
+            <ul class="menu">
+                <li><a href="https://www.instagram.com/koreakselatanstory_?stkn=Z3hwZG15NmticG4x" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@koreakselatanstory?_r=1&_t=ZS-99r3zpuEBEI" target="_blank" rel="noopener noreferrer">Tiktok</a></li>
+                <li><a href="https://open.spotify.com/playlist/3LfOSChiTXmvV3Tgh7xN3R?si=kZpnO-2-T8m5BCc_a72rLQ&utm_source=copy-link" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+                <li><a href="https://drive.google.com/drive/folders/15cQ_TDQ00aNyy5UeghM_6a364Ex1B66T" target="_blank" rel="noopener noreferrer">Drive</a></li>
+            </ul>
+        </div>
+
+        <!-- Lingkaran Logo Pojok Kanan Atas -->
+        <div class="nav-profile">
+            <img src="korsel.jpg" alt="Logo Profile">
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner" id="banner">
+        <div class="banner-content">
+            <h1 id="banner-title">KORSEL</h1>
+            <p id="banner-desc">kebersamaan yang akan selalu abadi dalam sanubari</p>
+            <a class="btn-play" id="btn-play" href="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=" target="_blank" rel="noopener noreferrer">▶ Putar</a>
+            <button class="btn-info" id="btn-info">ℹ Info Lainnya</button>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="slider-section">
+        <h2>Memories</h2>
+
+        <div class="slider-wrapper">
+            <button class="slide-btn left" id="btn-slide-left">❮</button>
+
+            <div class="slider" id="slider">
+                <div class="item">
+                    <img src="before_lomba.jpg" alt="Before Lomba" data-title="BEFORE LOMBA" data-desc="Ini awal sebelum keseruan yang agak melelahkan ygy." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=">
+                </div>
+                <div class="item">
+                    <img src="malam_puncak.jpg" alt="Malam Puncak" data-title="MALAM PUNCAK" data-desc="Malam penuh haru kebangaan dan ga mungkin dilupain sih, jujurr." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=">
+                </div>
+                <div class="item">
+                    <img src="senior.jpg" alt="Senior" data-title="SENIOR" data-desc="Perwakilan para orang tua hebat yang mampu mengayomi anak-anaknya." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE="> 
+                </div>
+                <div class="item">
+                    <img src="lanang.jpg" alt="Lanang" data-title="LANANG" data-desc="Kalian semua terlalu gagah men, buantai terus dunia jan nyerah." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=">
+                </div>
+                <div class="item">
+                    <img src="wadon.jpg" alt="Wadon" data-title="WADON" data-desc="Mereka bukan bidadari yaa, tapi ga kalah cantik kokk." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=">
+                </div>
+                <div class="item">
+                    <img src="kic.jpg" alt="KIC" data-title="KIC" data-desc="Tadinya sih mau ke pengandaran cuman muter-muter kuningan aja udah pada ngeluh nyeri bujur." data-video="https://www.instagram.com/reel/DcXyt4OTyzv/?stkn=eXhib29mZXpicmE=">
+                </div>
+            </div>
+
+            <button class="slide-btn right" id="btn-slide-right">❯</button>
+        </div>
+    </section>
+
+    <!-- Modal Pop-up Info Lainnya -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 id="modal-title">KORSEL</h2>
+            <div class="modal-body">
+                <p id="modal-desc">kebersamaan yang akan selalu abadi dalam sanubari</p>
+                <hr>
+                <p><strong>Detail Tambahan:</strong></p>
+                <p>Untuk semua dokumentasi dan juga kenangan yang telah kita buat udah tersimpan rapih di semua sosmed korsel yaa, jadi kalo kangen buka aja jangan sungkan. I LOVE U ALL, Sehat dan Sukses Terus yaa.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

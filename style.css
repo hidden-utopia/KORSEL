@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+/* Kelompok Kiri (Logo & Menu) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #e50914;
+}
+
+/* Profil Lingkaran Pojok Kanan Atas */
+.nav-profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #e50914;
+    flex-shrink: 0;
+}
+
+.nav-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Banner Header */
+.banner {
+    height: 75vh;
+    min-height: 450px;
+    width: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.95) 25%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top, #000 5%, transparent 40%),
+        url("before_lomba.jpeg"); /* Fixed: Spasi dihapus agar cocok di GitHub Pages */
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.banner-content {
+    max-width: 500px;
+    z-index: 10;
+    margin-top: 40px;
+}
+
+.banner-content h1 {
+    font-size: 56px;
+    color: #e50914;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.banner-content p {
+    margin: 20px 0;
+    line-height: 1.4;
+    color: #e5e5e5;
+    font-size: 16px;
+}
+
+/* Tombol Aksi */
+.btn-play, .btn-info {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-play {
+    background: white;
+    color: black;
+}
+
+.btn-play:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.btn-info {
+    background: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.btn-info:hover {
+    background: rgba(109, 109, 110, 0.4);
+}
+
+/* Section Slider Memories */
+.slider-section {
+    padding: 20px 40px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+}
+
+.slider-section h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    width: 220px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #141414;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Tombol Panah Slider */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.7);
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 12px 16px;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.slide-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+/* Modal Pop-up */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #181818;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-content h2 {
+    color: #e50914;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.modal-body p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.modal-body hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 15px 0;
+}
+
+/* Responsif Layar Kecil / HP */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-left {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu li a {
+        font-size: 12px;
+    }
+
+    .banner {
+        padding: 100px 20px 40px 20px;
+        height: auto;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+    }
+
+    .slider-section {
+        padding: 20px;
+    }
+
+    .item {
+        width: 160px;
+        height: 100px;
+    }
+
+    .slide-btn {
+        display: none;
+    }
+}
